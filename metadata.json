@@ -1,0 +1,6 @@
+{
+  "name": "KIDSPARK",
+  "description": "Raise Their Potential, One Day at a Time. Child growth, smart routine planner, future skills explorer, and parenting companion for ages 1-10.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

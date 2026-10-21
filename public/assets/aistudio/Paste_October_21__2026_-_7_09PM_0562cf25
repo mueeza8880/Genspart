@@ -1,0 +1,1166 @@
+# MASTER BUILD PROMPT — KIDSPARK
+## Create a Real, Production-Oriented Child Growth & Future Skills Application
+
+You are an expert full-stack software engineer, UI/UX architect, Firebase developer, AI integration engineer, child-development content designer, and application security specialist.
+
+Your mission is to build **KIDSPARK**, a premium, mobile-first, parent-controlled application for families with children aged 1–10.
+
+**Brand name:** KIDSPARK  
+**Tagline:** Raise Their Potential, One Day at a Time.  
+**Product category:** Parenting, child development, family organization, education, future skills.
+
+This is NOT a static website, landing-page-only project, fake dashboard, or clickable prototype.
+
+Build a real application with functioning screens, persistent data, real authentication, working forms, interconnected features, a secure backend, and thoughtful user experiences.
+
+Use an incremental development approach, but implement as much of the complete working application as possible. Do not silently replace requested functionality with nonfunctional mockups.
+
+---
+
+# 1. PRODUCT VISION
+
+KIDSPARK helps parents organize children's everyday lives, nurture development, discover interests, and support healthy growth from ages 1 to 10.
+
+The app should answer four important questions:
+
+1. What should I plan for my child today?
+2. Which age-appropriate activities can help my child learn and grow?
+3. What interests and emerging strengths has my child demonstrated?
+4. How can I encourage healthy habits, independence, creativity, confidence, and curiosity?
+
+The experience must feel like a personal child growth companion for parents, rather than a rigid academic performance system.
+
+**Critical philosophy:**
+
+Every child develops differently. Never rank children by intelligence, predict future career success, diagnose development, or pressure parents to achieve milestones by arbitrary deadlines.
+
+Emphasize enjoyment, relationships, play, safety, learning, and child autonomy.
+
+# 2. TARGET CUSTOMERS
+
+Primary users:
+- Parents and caregivers with children aged 1–10
+- Families raising multiple children
+- Busy working parents
+- Parents looking for age-appropriate activities
+- Parents interested in healthy habits and future skills
+- Parents who want a practical way to track family routines
+
+Supported languages initially:
+- English
+- Urdu-ready localization architecture for a future release
+
+Currency display:
+- USD as default for future subscription screens
+- Architecture should support additional currencies
+
+The application is controlled by adult parents/caregivers, not directly by young children.
+
+# 3. TECHNOLOGY AND ARCHITECTURE
+
+Use Google AI Studio's full-stack web application environment.
+
+Preferred technologies:
+
+Frontend:
+- React
+- TypeScript
+- Tailwind CSS
+- Reusable UI components
+- React Router or equivalent
+- Responsive mobile-first layout
+- Accessible forms and navigation
+- Modern charting library when appropriate
+
+Backend:
+- Node.js server-side runtime
+- TypeScript where supported
+- Modular API/service architecture
+- Server-side validation
+- Centralized error handling
+
+Authentication:
+- Firebase Authentication
+- Google Sign-In
+- Email/password if enabled and properly configured
+- Secure session management
+
+Database:
+- Cloud Firestore
+- Persistent parent profiles
+- Child profiles
+- Daily activities
+- Routines
+- Habit records
+- Parent observations
+- Development journal
+- Goals
+- Weekly plans
+- Saved AI recommendations
+
+AI:
+- Gemini integration using current supported SDKs
+- Server-side Gemini API calls
+- No exposed secret API keys
+- Typed and validated structured outputs
+- Cost controls and sensible usage limits
+
+Infrastructure:
+- Environment-based configuration
+- Firebase Security Rules
+- Secure authenticated backend routes
+- Graceful loading and error states
+- Deployable project configuration
+- Clear README and setup guide
+
+Avoid hardcoded secrets, fake backend services, and claims of successful deployment without evidence.
+
+If Firebase provisioning requires my authorization, show the integration request instead of fabricating configuration.
+
+# 4. VISUAL DESIGN SYSTEM
+
+The UI must feel like a premium parenting startup product.
+
+Visual direction:
+- Beautiful modern SaaS-style interface
+- Soft, playful, calm, and professional
+- Elegant rounded cards
+- High-quality illustrated icons
+- Friendly microinteractions
+- Spacious layouts
+- Clear typography
+- Clean dashboards
+
+Colors:
+
+Primary:
+Deep teal #087F8C
+
+Secondary:
+Warm coral #FF8A65
+
+Accent:
+Soft yellow #FFD166
+
+Background:
+Warm ivory #FFF9F1
+
+Supporting:
+Mint #DDF4E9
+Light blue #E7F3FF
+Lavender #EEE8FF
+
+Text:
+Deep navy #18314A
+
+Typography:
+Use a modern Google Font such as Nunito or Plus Jakarta Sans.
+
+Design principles:
+- Touch-friendly buttons
+- Minimum accessible tap targets
+- Strong contrast
+- Mobile-first responsive layout
+- Consistent spacing
+- Smooth, subtle animations
+- Skeleton loaders
+- Helpful empty states
+- Toast notifications
+- Keyboard accessibility
+- Reduced-motion support
+
+Navigation for mobile:
+Bottom navigation with:
+1. Home
+2. Planner
+3. Explore
+4. Growth
+5. Profile
+
+Desktop:
+Sidebar navigation with the same major sections.
+
+Use warm family-oriented illustrations where helpful, without overloading the interface.
+
+# 5. AUTHENTICATION AND ONBOARDING
+
+Create a complete onboarding flow.
+
+Screen 1: Welcome
+- KIDSPARK logo
+- Tagline
+- Attractive illustration
+- Get Started button
+- Sign In button
+
+Screen 2: Account Registration
+- Google Sign-In
+- Email/password if configured
+- Forgot password
+- Privacy Policy
+- Terms of Service
+- Clear parent-only account notice
+
+Screen 3: Parent Profile
+Collect only necessary details:
+- Parent display name
+- Preferred language
+- Optional timezone
+- Notification preferences
+
+Screen 4: Add Child
+Fields:
+- Child nickname, not legal name
+- Birth month/year or age
+- Optional interests
+- Optional preferred activity categories
+- Optional accessibility considerations, only if necessary and explicitly consented to
+- Optional general routine preferences
+
+Do not require child photos, exact date of birth, school location, address, or other unnecessary personal data.
+
+Screen 5: Family Priorities
+Parent selects up to three areas:
+- Learning
+- Creativity
+- Communication
+- Healthy routines
+- Physical play
+- Independence
+- Social skills
+- Emotional awareness
+- Problem-solving
+
+Screen 6: Daily Planning Preferences
+- Approximate wake-up time
+- Approximate bedtime
+- Available activity time
+- School or daycare schedule when applicable
+- Weekday/weekend differences
+
+Screen 7: Dashboard Introduction
+Explain:
+- Today's Plan
+- Activity Library
+- Growth Journal
+- Future Skills Explorer
+- AI Parent Assistant
+
+After onboarding, generate an editable suggested day plan.
+
+Save progress and prevent accidental onboarding data loss.
+
+# 6. HOME DASHBOARD
+
+Create a real personalized home dashboard.
+
+Header:
+"Good Morning, [Parent Name]!"
+
+Secondary message:
+"Small moments make a big difference."
+
+Allow switching between child profiles.
+
+Show:
+
+A. Child Profile Card
+- Nickname
+- Age
+- Selected interests
+- Active goals
+
+B. Today's Overview
+- Activities planned
+- Activities completed
+- Family events
+- Suggested next activity
+
+C. Daily Routine Timeline
+- Morning
+- Afternoon
+- Evening
+- Bedtime
+
+D. Growth Focus of the Day
+Example:
+"Today: Creative Thinking"
+
+E. Recommended Activity
+- Activity title
+- Appropriate age range
+- Duration
+- Materials
+- Why it may be useful
+- Start Activity button
+
+F. Parent Reflection
+Question:
+"What made your child smile today?"
+
+G. Weekly Consistency Summary
+Track participation without child performance rankings.
+
+All dashboard values must come from real stored data and user preferences.
+
+Handle new users gracefully with helpful defaults.
+
+# 7. SMART DAILY ROUTINE PLANNER
+
+Build an interactive daily schedule system.
+
+Parents can:
+- Create custom routine items
+- Edit existing routines
+- Delete routines
+- Reorder tasks
+- Set approximate times
+- Mark activities complete
+- Duplicate routines
+- Save weekday templates
+- Save weekend templates
+- Add recurring activities
+- Adjust duration
+- Add notes
+
+Routine categories:
+- Morning
+- Meals
+- Learning
+- Free play
+- Physical movement
+- Outdoor activities
+- Quiet time
+- Family connection
+- Chores
+- Bedtime
+
+Example schedule for a 5-year-old:
+
+7:30 AM — Morning routine
+8:30 AM — Breakfast
+9:00 AM — Learning through play
+10:00 AM — Free play
+11:00 AM — Physical activity
+12:30 PM — Lunch
+2:00 PM — Creative activity
+4:00 PM — Outdoor movement
+6:00 PM — Family connection
+7:30 PM — Bedtime routine
+
+These are editable demonstration examples, not universally recommended schedules.
+
+Avoid automatically imposing unsuitable routines on infants, toddlers, or children with different needs.
+
+When a task is completed:
+- Update the dashboard immediately
+- Save completion to Firestore
+- Update the daily activity count
+- Show an encouraging animation
+- Allow undo
+
+Do not lose data when the page is refreshed.
+
+# 8. AGE-BASED ACTIVITY LIBRARY
+
+Build a searchable library containing at least 100 original activities.
+
+Age groups:
+- 1–2 years
+- 3–4 years
+- 5–6 years
+- 7–8 years
+- 9–10 years
+
+Activity categories:
+- Sensory play
+- Language development
+- Creativity
+- Logical thinking
+- Physical movement
+- Social interaction
+- Emotional awareness
+- STEM exploration
+- Nature and outdoors
+- Independent living skills
+- Family bonding
+- Screen-free play
+
+Every activity must include:
+- Unique activity ID
+- Title
+- Age range
+- Estimated duration
+- Required materials
+- Setup instructions
+- Step-by-step directions
+- Parent participation level
+- Safety considerations
+- Developmental areas supported
+- Easier variation
+- More challenging variation
+- Indoor/outdoor classification
+
+Example:
+
+Activity: Build a Mini City
+
+Age: 5–8
+
+Duration: 20–30 minutes
+
+Materials:
+- Building blocks
+- Paper
+- Crayons
+- Toy vehicles
+
+Instructions:
+1. Ask the child to imagine a small town.
+2. Build roads and buildings.
+3. Add a hospital, park, and school.
+4. Encourage the child to explain the design.
+5. Discuss what the town needs.
+
+Potential benefits:
+- Imagination
+- Planning
+- Communication
+- Spatial reasoning
+
+Do not invent clinical or scientifically proven outcomes for individual activities.
+
+For younger children, exclude choking hazards, unsafe craft materials, and activities requiring abilities beyond their age. Clearly state when active adult supervision is required.
+
+Implement:
+- Search
+- Age filter
+- Category filter
+- Duration filter
+- Favorite button
+- Save activity
+- Add activity to daily plan
+- Mark completed
+- Parent notes
+- Completed activity history
+
+Activity selection must work with persistent database data.
+
+# 9. FUTURE SKILLS EXPLORER
+
+This is a major differentiating feature.
+
+Create an exploration system that introduces children to different interests without assigning a predetermined future profession.
+
+Exploration pathways:
+
+1. Young Scientist
+2. Future Technologist
+3. Creative Artist
+4. Confident Communicator
+5. Young Innovator
+6. Caring Leader
+7. Active Explorer
+8. Young Problem Solver
+9. Curious Reader
+10. Creative Builder
+
+Each pathway contains:
+- Description
+- Age suitability
+- Suggested projects
+- Related everyday skills
+- Printable challenges
+- Parent reflection questions
+- Activity history
+
+Example: Young Scientist
+
+For ages 3–4:
+Observe plants, colors, and weather.
+
+For ages 5–6:
+Simple supervised floating and sinking experiments.
+
+For ages 7–8:
+Create a nature observation notebook.
+
+For ages 9–10:
+Design a simple experiment and record observations.
+
+Create a pathway detail page with:
+- Hero header
+- Skill description
+- Recommended activities
+- Project cards
+- Saved observations
+- Optional challenge checklist
+- Add to Weekly Plan button
+
+Never assign a fixed intelligence score, career prediction, or permanent talent label.
+
+# 10. CHILD GROWTH JOURNAL
+
+Build a private journal for parents.
+
+Features:
+- Daily reflections
+- Weekly reflections
+- Memorable moments
+- New skills noticed
+- Child interests
+- Questions to explore
+- Activity notes
+- Optional parent-uploaded photos
+- Monthly summaries
+
+Journal entry fields:
+- Child ID
+- Entry date
+- Category
+- Text
+- Optional photo attachment
+- Created timestamp
+- Updated timestamp
+
+Requirements:
+- Create, read, update, delete
+- Chronological timeline
+- Filter by month/category
+- Search journal entries
+- Export as PDF where practical
+- Clear permission checks
+
+The journal should encourage observation, not comparison.
+
+Example reflection:
+"Today my child spent 25 minutes building a bridge and kept experimenting when it fell."
+
+AI can optionally summarize observed themes, but must not turn these anecdotes into diagnoses or definitive personality assessments.
+
+# 11. HABIT BUILDER
+
+Create age-appropriate habit tracking.
+
+Suggested habits:
+- Brushing teeth
+- Tidying toys
+- Reading together
+- Kindness
+- Handwashing
+- Outdoor play
+- Bedtime preparation
+- Helping at home
+- Practicing an interest
+
+Features:
+- Create habit
+- Assign habit to child
+- Set frequency
+- Mark completed
+- Edit/delete
+- View history
+- Weekly progress
+- Gentle encouragement
+- Optional non-material rewards
+
+No guilt-based messaging.
+
+Do not use punitive streak loss mechanics or shame children for missing activities.
+
+# 12. 30-DAY SCREEN-FREE ADVENTURE MODULE
+
+Include our earlier product idea as a dedicated module.
+
+Title:
+30-Day Screen-Free Adventure
+
+Subtitle:
+Less scrolling. More playing, creating, and connecting.
+
+Features:
+- 30 unique offline activities
+- One suggested mission per day
+- Activity instructions
+- Materials list
+- Age adaptations
+- Progress tracker
+- Completion checkboxes
+- Optional printable activity cards
+- Completion certificate
+- Parent reflection notes
+
+Allow families to skip, swap, or repeat an activity.
+
+The program must not imply all screen time is harmful or that families need to avoid necessary technology.
+
+The module should feel integrated with the main daily planner.
+
+A parent should be able to click:
+"Add Today's Adventure to My Plan"
+
+The activity must appear in the planner and persist after reload.
+
+# 13. AI PARENT ASSISTANT
+
+Name:
+KIDSPARK AI Coach
+
+Create a dedicated conversational assistant.
+
+Examples of parent requests:
+- "Suggest five activities for my 4-year-old."
+- "My 7-year-old enjoys building things. What can we try?"
+- "Plan a rainy afternoon without screens."
+- "Create a weekend family activity plan."
+- "Give me a beginner science project."
+- "How can I help my child practice storytelling?"
+- "Make an affordable activity plan using household items."
+
+The AI assistant may use:
+- Child age
+- Parent-selected interests
+- Preferred activity time
+- Available materials
+- Saved family goals
+
+Use only parent-consented relevant data.
+
+AI response structure:
+- Brief recommendation
+- Reason for age suitability
+- Materials
+- Steps
+- Safety notes where relevant
+- Add to Planner action
+
+Important:
+Generated activities must be validated for age suitability and basic safety before being suggested.
+
+The AI must:
+- Not diagnose developmental disorders
+- Not recommend medical treatment
+- Not predict intelligence or career success
+- Not provide dangerous activities
+- Not give manipulative parenting guidance
+- Not shame parents or children
+- Recommend qualified professionals for developmental or health concerns
+- Clearly label AI-generated suggestions
+
+Add:
+- Loading indicator
+- Retry option
+- Error handling
+- Rate limiting
+- Fallback curated activities when AI is unavailable
+
+AI-generated planner actions must request parent confirmation before saving.
+
+# 14. AI WEEKLY PLAN GENERATOR
+
+Create a separate AI planning tool.
+
+Inputs:
+- Child profile
+- Parent-selected goals
+- Available daily time
+- Indoor/outdoor preference
+- Budget level
+- Materials already available
+- Weekday/weekend constraints
+
+Output:
+A seven-day suggested plan.
+
+Each day includes:
+- One learning-through-play activity
+- One movement or outdoor activity
+- One creative or family activity, when appropriate
+
+Avoid over-scheduling.
+
+Parents can:
+- Regenerate
+- Edit
+- Replace individual activities
+- Accept weekly plan
+- Save to Firestore
+- Add to calendar within the app
+
+Require parent approval before writing generated plans.
+
+Show reasonable duration estimates and note required materials.
+
+# 15. PARENT INSIGHTS DASHBOARD
+
+Build a private insights area.
+
+Show:
+- Activities completed this week
+- Most explored interests
+- Types of activities tried
+- Family routine consistency
+- Parent journal activity
+- Monthly highlights
+
+Charts:
+- Weekly activity bar chart
+- Activity category distribution
+- Monthly participation calendar
+- Interest exploration history
+
+Do not use:
+- Child IQ estimates
+- Intelligence rankings
+- Percentile comparisons
+- Success probability scores
+- Predicted careers
+- Clinical developmental scoring
+
+Label all visualizations clearly as activity and parent-reported participation summaries.
+
+# 16. MULTIPLE CHILD SUPPORT
+
+One parent account can create multiple child profiles.
+
+Features:
+- Add child
+- Edit profile
+- Switch active child
+- Separate schedules
+- Separate journals
+- Separate activity progress
+- Separate interest records
+- Delete profile with confirmation
+
+All records must be scoped to the correct parent and child.
+
+The current active child should be clearly visible.
+
+# 17. SETTINGS AND PRIVACY
+
+Create a functional settings page.
+
+Sections:
+- Parent profile
+- Children management
+- Language preferences
+- Notifications
+- Accessibility
+- Privacy
+- Export data
+- Delete child profile
+- Delete account
+- Help and feedback
+
+Data protection:
+- Minimize child information collection
+- Require adult account ownership
+- Protect all records with authentication and authorization
+- Never expose one family's data to another family
+- Validate Firestore Security Rules
+- Avoid public child profiles
+- Avoid third-party advertising trackers in child profile areas
+- Obtain explicit parent permission for optional uploads
+- Provide understandable privacy disclosures
+- Implement deletion and export processes
+- Do not use private child data to train custom models
+- Apply reasonable upload size/type restrictions
+
+Do not claim legal compliance is automatic. Flag COPPA, GDPR-K, and other relevant child-data requirements for legal review before commercial deployment.
+
+# 18. FIRESTORE DATA MODEL
+
+Design an efficient, normalized-enough Firestore structure.
+
+Suggested structure:
+
+users/{userId}
+- displayName
+- email
+- createdAt
+- preferences
+- onboardingCompleted
+
+users/{userId}/children/{childId}
+- nickname
+- birthMonth
+- birthYear
+- selectedInterests
+- parentGoals
+- createdAt
+
+users/{userId}/children/{childId}/routines/{routineId}
+
+users/{userId}/children/{childId}/activityLogs/{logId}
+
+users/{userId}/children/{childId}/habits/{habitId}
+
+users/{userId}/children/{childId}/journal/{entryId}
+
+users/{userId}/children/{childId}/weeklyPlans/{planId}
+
+users/{userId}/children/{childId}/interestObservations/{observationId}
+
+users/{userId}/children/{childId}/screenFreeProgress/{recordId}
+
+activityCatalog/{activityId}
+
+pathwayCatalog/{pathwayId}
+
+Keep global catalog content read-only for standard users.
+
+Create necessary indexes and robust Firestore Security Rules.
+
+Security Rules must enforce that a signed-in parent can only access records under their own UID.
+
+Do not rely on hiding UI elements as an authorization mechanism.
+
+If server-side administrative operations are needed, ensure the server verifies Firebase identity tokens and enforces ownership.
+
+# 19. DATA QUALITY AND SEED CONTENT
+
+Populate the application with real, original seed content.
+
+Required:
+- 100 original activity entries
+- 10 interest exploration pathways
+- Age-specific routine suggestions
+- 30 screen-free challenge activities
+- Parent reflection prompts
+- Habit templates
+- Sample achievement certificate design
+
+Avoid repeated placeholder entries.
+
+Ensure activities are actually different and categorized correctly.
+
+Keep sample/demo data separate from real user data.
+
+Make it possible to initialize catalog content idempotently without duplicating records.
+
+# 20. NOTIFICATIONS
+
+Implement an in-app reminder system first.
+
+Suggested reminders:
+- Planned activity
+- Evening reflection
+- Weekly family planning
+- Screen-free challenge mission
+
+Provide settings to enable or disable reminders.
+
+If browser notifications are implemented:
+- Request permission appropriately
+- Explain limitations
+- Provide fallback in-app reminders
+- Avoid claiming reliable background delivery without a supported push infrastructure
+
+Never pressure parents with excessive notifications.
+
+# 21. REPORTS AND EXPORTS
+
+Build useful downloadable outputs:
+
+1. Weekly Child Activity Summary
+2. Monthly Family Growth Journal
+3. Printable Daily Routine Chart
+4. Weekly Activity Calendar
+5. 30-Day Challenge Certificate
+
+Where PDF generation is implemented:
+- Make PDFs printable
+- Use clean page layouts
+- Include child nickname only with parental control
+- Do not expose private records through public download URLs
+
+# 22. MONETIZATION ARCHITECTURE
+
+Design the app so paid features can be enabled later.
+
+Plans:
+
+FREE:
+- One child profile
+- Basic routine planner
+- Limited activity recommendations
+- Limited journal history
+
+PLUS:
+- Multiple child profiles
+- AI weekly planner
+- Full activity library
+- Future Skills Explorer
+- Advanced insights
+- Printable exports
+
+FAMILY:
+- Everything in Plus
+- Additional family collaboration features in a future release
+
+Do not implement fake payments.
+
+Show a clear subscription architecture but keep all features accessible in development mode for testing.
+
+Do not launch live billing without explicit configuration.
+
+Never store payment card details directly.
+
+# 23. REQUIRED APPLICATION ROUTES
+
+Implement real screens at appropriate routes:
+
+/
+- Landing page
+
+/auth
+- Authentication
+
+/onboarding
+- Parent onboarding
+
+/dashboard
+- Home dashboard
+
+/planner
+- Daily planner
+
+/activities
+- Activity library
+
+/activities/:id
+- Activity details
+
+/explore
+- Future skills explorer
+
+/explore/:id
+- Pathway details
+
+/journal
+- Child growth journal
+
+/habits
+- Habit builder
+
+/screen-free
+- 30-day challenge
+
+/ai-coach
+- AI parent assistant
+
+/weekly-plan
+- AI weekly planner
+
+/insights
+- Parent insights
+
+/children
+- Child profiles
+
+/settings
+- Account settings
+
+/pricing
+- Pricing overview
+
+Help pages:
+- Privacy
+- Terms
+- FAQ
+- Contact
+
+Create protected routes where necessary.
+
+# 24. IMPORTANT INTERACTION REQUIREMENTS
+
+Everything visible as an interactive control must work.
+
+Examples:
+- Add Child saves data
+- Switch Child changes the active profile
+- Complete Activity updates the dashboard
+- Edit Routine persists changes
+- Favorite Activity saves the favorite
+- Search filters actual records
+- Save Weekly Plan creates records
+- AI Coach returns real suggestions
+- Add AI Activity to Planner works
+- Export PDF produces an actual file
+- Delete Child removes authorized data
+- Logout ends the session
+
+Do not use decorative buttons that do nothing.
+
+Do not hardcode dashboard counters.
+
+Do not display fabricated reviews, statistics, or testimonials.
+
+# 25. OFFLINE AND ERROR HANDLING
+
+Create a resilient user experience.
+
+Handle:
+- Network failure
+- Firebase unavailable
+- Invalid form input
+- Expired authentication
+- Empty database records
+- Gemini API timeouts
+- Permission errors
+- Duplicate requests
+
+Use:
+- Error boundaries
+- Retry buttons
+- Friendly empty states
+- Validation messages
+- Loading indicators
+- Toast confirmations
+
+If offline functionality is implemented, distinguish locally saved changes from synchronized data and handle conflicts safely.
+
+# 26. TESTING
+
+Test the following full user journey:
+
+1. Parent opens the app.
+2. Parent registers/signs in.
+3. Parent completes onboarding.
+4. Parent adds a 5-year-old child.
+5. Parent sees a personalized dashboard.
+6. Parent adds a new daily routine.
+7. Parent completes one activity.
+8. Parent views updated progress.
+9. Parent explores the Young Scientist pathway.
+10. Parent adds a science activity to the planner.
+11. Parent generates an AI weekly plan.
+12. Parent edits and saves it.
+13. Parent writes a journal entry.
+14. Parent starts the screen-free challenge.
+15. Parent refreshes the browser.
+16. All saved data persists.
+17. Parent adds a second child.
+18. The children have separate records.
+19. Parent exports a report.
+20. Parent signs out.
+
+Also test:
+- Mobile navigation
+- Desktop responsiveness
+- Form validation
+- Empty states
+- Failed API responses
+- Route protection
+- Firestore authorization
+- Keyboard accessibility
+- Cross-account data isolation
+
+For database security, test with two different parent accounts to verify that neither can access the other's child records.
+
+# 27. DEVELOPMENT EXECUTION ORDER
+
+Implement the app in these stages:
+
+PHASE A — Foundation
+- Project structure
+- Dependencies
+- Brand theme
+- Layout
+- Navigation
+- Authentication
+- Firestore initialization
+- Security rules
+
+PHASE B — Core Parent Experience
+- Onboarding
+- Child profiles
+- Dashboard
+- Daily planner
+- Habit tracker
+
+PHASE C — Learning and Growth
+- Activity catalog
+- Activity details
+- Favorites
+- Growth journal
+- Future Skills Explorer
+
+PHASE D — AI Features
+- Gemini integration
+- AI Parent Coach
+- Weekly plan generator
+- Structured output validation
+- Graceful fallback
+
+PHASE E — Advanced Features
+- Screen-free challenge
+- Insights dashboard
+- Reports and exports
+- Notifications
+- Settings
+
+PHASE F — Quality
+- Testing
+- Accessibility
+- Mobile optimization
+- Privacy review
+- Security review
+- Documentation
+
+Do not sacrifice functional data flows for additional decorative features.
+
+If the complete application exceeds the available execution context, prioritize a stable end-to-end core: authentication, child profiles, routine planner, activity library, progress persistence, and AI planning. Then clearly identify unfinished modules for the next iteration.
+
+# 28. ACCEPTANCE CRITERIA
+
+The app is not complete until:
+
+- The React application builds successfully.
+- There are no blocking TypeScript errors.
+- Navigation works.
+- Sign-in works when Firebase is configured.
+- Child profile changes persist.
+- Parent routines persist.
+- Activity completion persists.
+- Multi-child data remains separated.
+- AI calls use a supported secure integration.
+- Firestore authorization has been reviewed and tested.
+- No secret API keys appear in client bundles.
+- The app works on mobile and desktop.
+- Major buttons perform meaningful actions.
+- All incomplete features are clearly identified.
+- A deployment guide exists.
+
+Never claim success for functionality that has not been verified.
+
+# 29. FINAL HANDOFF
+
+At the end, provide:
+
+1. Application architecture summary
+2. Complete project structure
+3. Implemented features
+4. Pending or incomplete features
+5. Firebase configuration instructions
+6. Environment variables required
+7. Firestore Security Rules
+8. AI model integration description
+9. Testing results
+10. Instructions for publishing
+11. Any remaining security or privacy concerns
+
+# FINAL COMMAND
+
+Begin building KIDSPARK now.
+
+Start by establishing the real app architecture, implementing the parent authentication and onboarding experience, and developing a beautiful, responsive dashboard connected to persistent child profiles.
+
+Continue into the planner, activity library, journals, pathways, and AI functionality.
+
+Make pragmatic engineering decisions without stopping for cosmetic questions.
+
+If external configuration, credentials, billing, or deployment authorization is necessary, request it rather than faking completion.
+
+The finished result should feel like a polished digital product that real parents would trust and use every day.
